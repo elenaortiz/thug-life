@@ -1,0 +1,101 @@
+.glasses {
+  display: none;
+}
+
+.squirrel:hover~.glasses {
+  display: block;
+  position: absolute;
+  width: 250px;
+  left: 280px;
+  animation:
+    glassesDown 3s linear forwards,
+    spin 3s linear forwards;
+}
+
+
+@keyframes glassesDown {
+  0% {
+    top: 50px;
+  }
+
+  100% {
+    top: 350px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.thug-life {
+  display:none;
+}
+
+.squirrel:hover~.thug-life {
+  display: block;
+  width: 250px;
+  position: absolute;
+  left:-1000px;
+  top: 200px;
+  animation: thugliferight 3s linear forwards;
+  animation-delay: 1s;
+  z-index: 5;
+}
+
+@keyframes thugliferight {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 50px;
+  }
+}
+
+.joint {
+  display: none;
+}
+
+.squirrel:hover~.joint {
+  display: block;
+  width:250px;
+  position: absolute;
+  left:150px;
+  top:680px;
+  animation:trompetaDown 3s linear forwards;
+  animation-delay: 1s;
+  z-index:5;
+}
+
+@keyframes trompetaDown {
+  0% {
+    top: 710px;
+  }
+
+  100% {
+    top: 430px;
+  }
+}
+
+.squirrel:hover {
+  animation-name: changecolor;
+  animation-timing-function: linear;
+  animation-duration: 2000s;
+  animation-delay: 5s;
+}
+
+@keyframes changecolor {
+  0% {
+    filter: grayscale(100%);
+  }
+
+  100% {
+    filter: grayscale(100%);
+  }
+}
